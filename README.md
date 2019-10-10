@@ -4,7 +4,15 @@ This package includes a property wrapper to access UserDefaults and a function t
 
 ### Usage:
 
+#### UserDefaults
+
 ``` swift
    @UserDefault("Autoload", defaultValue: true)
    var autoload: Bool
+```
+
+####  bundledData()
+
+``` swift
+let version = bundledData(key: "CFBundleShortVersionString")
 ```
