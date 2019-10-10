@@ -1,4 +1,18 @@
+//
+//  UserDefaults.swift
+//  
+//
+//  Created by Michael Salmon on 2019-10-08.
+//
+
 import Foundation
+
+/**
+UserDefaulty property wrapper
+
+ Map varaible to UserDefaults
+
+ */
 
 @propertyWrapper
 public struct UserDefault<T> {
