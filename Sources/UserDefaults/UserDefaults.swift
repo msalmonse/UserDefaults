@@ -9,15 +9,13 @@ import Foundation
 
 
 /// Property Wrapper to act as a bridge to UserDefaults
+/// - Parameter key: key to UserDefaults
+/// - Parameter defaultValue: default when no value exists in UserDefaults
 @propertyWrapper
 public struct UserDefault<T> {
     let key: String
     let defaultValue: T
 
-    /// Initialize wrapper
-    /// - Parameter key: key to UserDefaults
-    /// - Parameter defaultValue: default when no value exists in UserDefaults
-    ///
     public init(_ key: String, defaultValue: T) {
         self.key = key
         self.defaultValue = defaultValue
