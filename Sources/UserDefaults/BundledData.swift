@@ -8,10 +8,11 @@
 import Foundation
 
 // swiftlint:disable force_cast
-/// # bundledData
-/// Fetch data from the bundles info.plist
+
+
+/// Fetch a value from the app's bundle
+/// - Parameter key: key to bundle store
 ///
-/// Parameter: key - the key for the data
 public func bundledData(key: String) -> String? {
     guard let object = Bundle.main.object(forInfoDictionaryKey: key) else { return nil }
     if object is String { return object as? String }
@@ -20,6 +21,7 @@ public func bundledData(key: String) -> String? {
     return nil
 }
 
+/// return a list of the keys contained in the bundle
 public func bundleKeys() -> [String]? {
     let info = Bundle.main.infoDictionary
     let list = info?.keys.sorted()
